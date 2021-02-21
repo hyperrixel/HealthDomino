@@ -27,7 +27,6 @@ from Crypto.PublicKey import RSA
 from hashlib import sha256
 from mock_server import Server
 from os import urandom
-from tempfile import TemporaryFile
 
 
 

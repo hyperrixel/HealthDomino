@@ -23,8 +23,8 @@ nothing is well implemented.
 """
 from base64 import b64encode
 from copy import deepcopy
-from os import urandom
 from hashlib import sha256
+from os import urandom
 
 
 
