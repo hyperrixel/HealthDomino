@@ -18,6 +18,7 @@ We like to work in hackathon-style. Hackathon is more than a normal challenge wh
 
 ### DOF – Deep Model Core Output Framework [Hackathon winner]
 
+[![Generic badge](https://img.shields.io/badge/-hackathon%20winner-yellow)](https://shields.io/)
 [Repository here.](https://github.com/hyperrixel/dof)
 
 ### MGP – Medical Gateway Platform
@@ -26,6 +27,7 @@ We like to work in hackathon-style. Hackathon is more than a normal challenge wh
 
 ### Aaion [Hackathon global finalist]
 
+[![Generic badge](https://img.shields.io/badge/-hackathon%20global%20finalist-yellow)](https://shields.io/)
 [Repository here.](https://github.com/hyperrixel/aaion)
 
 # Problem description
@@ -46,6 +48,10 @@ In daily life we can hear slogans like “data is the new oil” that describe t
 
 ## What it does
 
+### Workflow
+
+![Workflow](https://github.com/hyperrixel/HealthDomino/blob/main/asset/workflow.png "Workflow")
+
 ### User side
 
 HealthDomino is GDPR and HIPAA compatible file format and transmission protocol for eHealth data. It helps the user to process and transmit the collected *raw data* from various sources for example smart devices, medical records, user inputs. The collected raw data get immediately transformed into an *encoded data* with a user-side encoding script. This script is changing in every run. The next phase is when the user encrypts the encoded data. The parameters of the encryption script renews at each time of run. So if the user sends the same raw data at two or more times, the hashes will be different.
@@ -59,6 +65,7 @@ The data can be unpack anytime by the server and can be normalized or aggregated
 ### Anonymity
 
 Users can be anonymous during the whole process. There is no need to share sensitive data if they don’t want to. When a user wants to delete a unique datapoint or all datapoints, they can easily do it by providing the removable innerhash value and their own unique hashbase. This hashbase value is different in any datapoint and it is known only by the user.
+
 ### Broadcast message
 
 Due to broadcasting service, data processors can send messages to the user without knowing the user’s real identity. It is possible since the response data package can be read by that user who sent the original data. The user can decide to accept or decline the message. The user can make or revoke consent statements anytime.
@@ -76,25 +83,31 @@ hard to hack
 ## Datasources
 
 The collected *raw data* can come from various sources:
-wearable smart devices
-other smart devices
-basic health supplement
-image from screening examination
-result of clinical examination
-attributes of user
+
+- wearable smart devices
+- other smart devices
+- basic health supplement
+- image from screening examination
+- result of clinical examination
+- attributes of user
 
 ## Security
 
 HealthDomino uses working methods from steganography and cryptography to protect data. The user side encoding and encrypting scripts renew run by run, datapoint by datapoint. So if the user shares the same data two times, the hashes will be different. On the server side, all vulnerable data are stored in different databases. 
 
 What if one of the databases is compromised?
-`encryption scripts`: decrypt every data and create a new encryption versions
-`encoding scripts`:  broadcast to the user to encode the data again and send back
-`encrypted data`: it is advised to broadcast to the user for providing a new encoded version again and re-encrypt the new datasets at server side
+
+- `encryption scripts`: decrypt every data and create a new encryption versions
+- `encoding scripts`:  broadcast to the user to encode the data again and send back
+- `encrypted data`: it is advised to broadcast to the user for providing a new encoded version again and re-encrypt the new datasets at server side
 
 # Technologies
 
 The demo of HealthDomino is written in Python, as it is prototype-friendly and it can easily read or adapt into other programming languages. Building blocks of our solution are used and tested on various fields from finance to IT security. Using hashes is a very common method in cryptography. 
+
+# UML classmethod
+
+![UML classmethod](https://github.com/hyperrixel/HealthDomino/blob/main/asset/UML_classmethod.png "UML classmethod")
 
 # Future plans
 
