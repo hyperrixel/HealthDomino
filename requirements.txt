@@ -1,0 +1,16 @@
+# Library dependencies for the QuanCulator project
+# You have to install these libraries, before you can run the code:
+# 'pip install -r requirements.txt'
+
+# Standard library dependencies:
+# base64
+# copy
+# hashlib
+# json
+# os
+# random
+# time
+python>=3.5
+
+# Additional library dependencies
+Crypto
